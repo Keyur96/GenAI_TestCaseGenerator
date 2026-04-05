@@ -67,8 +67,8 @@ def parse_test_cases(text):
     return pd.DataFrame(data)
 
 st.sidebar.title("Get model and api key details from user")
-st.session_state.model = st.sidebar.text_input("Please enter model name : ")
-st.session_state.api_key = st.sidebar.text_input("Enter api key : ")
+st.session_state.model = st.sidebar.text_input("Please enter groq model name : ")
+st.session_state.api_key = st.sidebar.text_input("Enter groq api key : ")
 
 os.environ["GROQ_API_KEY"] = st.session_state.api_key
 model = ChatGroq(model=st.session_state.model)
