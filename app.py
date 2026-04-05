@@ -108,9 +108,11 @@ input_method = st.radio("Choose input method:", ["Enter Requirement", "Upload Fi
 requirement_text = ""
 
 if input_method == "Enter Requirement":
+    st.subheader("Example requirement text : 'User should be able to login with email and password'")
     requirement_text = st.text_area("Enter Requirement:", height=150)
 
 elif input_method == "Upload File":
+    st.subheader("Upload Requirement File")
     uploaded_file = st.file_uploader("Upload Requirement File", type=["txt", "csv"])
 
     if uploaded_file:
